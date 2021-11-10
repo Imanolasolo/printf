@@ -1,22 +1,25 @@
 _printf
 
-_printf is a custom implementation of the C programming function printf. This project is an application of the C programming knowledge that Holberton School cohort 2 students have learned since starting the program on May 1, 2017.
+_printf is a custom implementation of the C programming function printf. This project is an application of the C programming knowledge that Holberton School cohort 2 students have learned since starting the program on MaySeptember 20, 2021.
 
 Prototype: int _printf(const char *, ...);
 
 Examples
 String
 
-Input: _printf("%s\n", 'This is a string.');
-Output: This is a string.
+Input: _printf("%s\n", 'I am a string.');
+Output: I am a string.
+
 Character
 
-Input: _printf("The first letter in the alphabet is %c\n", 'A');
-Output: The first letter in the alphabet is A
+Input: _printf("%c\n", 'H');
+Output: H
+
 Integer
 
-Input: _printf("There are %i dozens in a gross\n", 12);
-Output: There are 12 dozens in a gross
+Input: _printf("len %d\n", 12);
+Output: 12
+
 Decimal:
 
 Input: _printf("%d\n", 1000);
@@ -82,7 +85,7 @@ Mandatory Tasks
 
 		_putchar.c: - contains the function _putchar, which writes a character to stdout.
 
-		holberton.h: - contains all function prototypes used for _printf.
+		main.h: - contains all function prototypes used for _printf.
 
 		man_3_printf: - manual page for the custom _printf function.
 
