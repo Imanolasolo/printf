@@ -1,22 +1,25 @@
 _printf
 
-_printf is a custom implementation of the C programming function printf. This project is an application of the C programming knowledge that Holberton School cohort 2 students have learned since starting the program on 20 September of 2021.
+_printf is a custom implementation of the C programming function printf. This project is an application of the C programming knowledge that Holberton School cohort 2 students have learned since starting the program on MaySeptember 20, 2021.
 
 Prototype: int _printf(const char *, ...);
 
 Examples
 String
 
-Input: _printf("%s\n", 'This is a string.');
-Output: This is a string.
+Input: _printf("%s\n", 'I am a string.');
+Output: I am a string.
+
 Character
 
-Input: _printf("The first letter in the alphabet is %c\n", 'A');
-Output: The first letter in the alphabet is A
+Input: _printf("%c\n", 'H');
+Output: H
+
 Integer
 
-Input: _printf("There are %i dozens in a gross\n", 12);
-Output: There are 12 dozens in a gross
+Input: _printf("len %d\n", 12);
+Output: 12
+
 Decimal:
 
 Input: _printf("%d\n", 1000);
@@ -24,7 +27,7 @@ Output: 1000
 
 Project Requirements
 
-All files will be compiled on Ubuntu 14.04 LTS
+All files will be compiled on Ubuntu 20.04 LTS
 
 Programs and functions will be compiled with gcc 4.8.4 using flags -Wall -Werror -Wextra and -pedantic
 
@@ -34,65 +37,69 @@ Global variables are not allowed
 
 Authorized functions and macros:
 
-write (man 2 write);
-malloc (man 3 malloc);
-free (man 3 free);
-va_start (man 3 va_start);
-va_end (man 3 va_end);
-va_copy (man 3 va_copy);
-va_arg (man 3 va_arg);
-
+write (man 2 write)
+malloc (man 3 malloc)
+free (man 3 free)
+va_start (man 3 va_start)
+va_end (man 3 va_end)
+va_copy (man 3 va_copy)
+va_arg (man 3 va_arg)
 Mandatory Tasks
 
  Write function that produces output with conversion specifiers c, s, and %.
+  Handle conversion specifiers d, i.
 
- Handle conversion specifiers d, i. 
+   Create a man page for your function.
 
-Create a man page for your function.
+   Advanced Tasks
 
-Advanced Tasks
+    Handle conversion specifier b.
 
- Handle conversion specifier b.
+     Handle conversion specifiers u, o, x, X.
 
- Handle conversion specifiers u, o, x, X.
+     Use a local buffer of 1024 chars in order to call write as little as possible.
 
- Use a local buffer of 1024 chars in order to call write as little as possible.
+     Handle conversion specifier S.
 
- Handle conversion specifier S.
+     Handle conversion specifier p.
 
- Handle conversion specifier p.
+	 Handle flag characters +, space, and # for non-custom conversion specifiers.
 
- Handle flag characters +, space, and # for non-custom conversion specifiers.
- Handle length modifiers l and h for non-custom conversion specifiers.
- Handle the field width for non-custom conversion specifiers.
- Handle the precision for non-custom conversion specifiers.
- Handle the 0 flag character for non-custom conversion specifiers.
- Handle the custom conversion specifier r that prints the reversed string.
- Handle the custom conversion specifier R that prints the rot13'ed string.
- All above options should work well together.
+	 Handle length modifiers l and h for non-custom conversion specifiers.
 
-File Descriptions
+	 Handle the field width for non-custom conversion specifiers.
 
- _printf.c: - contains the fucntion _printf, which uses the prototype int _printf(const char *format, ...);. The format string is composed of zero or more directives. See man 3 printf for more detail. _printf will return the number of characters printed (excluding the null byte used to end output to strings) and will write output to stdout, the standard output stream.
+	 Handle the precision for non-custom conversion specifiers.
 
- _putchar.c: - contains the function _putchar, which writes a character to stdout.
+	 Handle the 0 flag character for non-custom conversion specifiers.
 
- main.h: - contains all function prototypes used for _printf.
+	 Handle the custom conversion specifier r that prints the reversed string.
 
- man_3_printf: - manual page for the custom _printf function.
+	 Handle the custom conversion specifier R that prints the rot13'ed string.
 
- print_chars.c: - contains the functions print_c, print_s, print_S, and print_r which handle the conversion specifiers c, s, S, and r, respectively, as well as hex_print, which prints a char's ascii value in uppercase hex
+	 All above options should work well together.
 
- print_numbers.c: - contains the functions print_i and print_d, which handle the conversion specifiers i and d, respectively
+		File Descriptions
 
- print_hex.c: - contains the functions print_hex, which prints an unsigned int in hexidecimal form, print_x, print_X, and print_p, which handle the conversion specifiers x, X, and p, respectively
+		_printf.c: - contains the fucntion _printf, which uses the prototype int _printf(const char *format, ...);. The format string is composed of zero or more directives. See man 3 printf for more detail. _printf will return the number of characters printed (excluding the null byte used to end output to strings) and will write output to stdout, the standard output stream.
 
- print_unsigned_int.c: - contains the functions print_u, print_o, and print_b, which handle the conversion specifiers u, o, and b, respectively
+		_putchar.c: - contains the function _putchar, which writes a character to stdout.
 
- print_rot13.c - contains the function print_R, which handles the conversion specifier R
+		main.h: - contains all function prototypes used for _printf.
 
-Authors
+		man_3_printf: - manual page for the custom _printf function.
 
- Bryan Freire
+		print_chars.c: - contains the functions print_c, print_s, print_S, and print_r which handle the conversion specifiers c, s, S, and r, respectively, as well as hex_print, which prints a char's ascii value in uppercase hex
 
- Imanol Asolo @Imanolasolo
+		print_numbers.c: - contains the functions print_i and print_d, which handle the conversion specifiers i and d, respectively
+
+		print_hex.c: - contains the functions print_hex, which prints an unsigned int in hexidecimal form, print_x, print_X, and print_p, which handle the conversion specifiers x, X, and p, respectively
+
+		print_unsigned_int.c: - contains the functions print_u, print_o, and print_b, which handle the conversion specifiers u, o, and b, respectively
+
+		print_rot13.c - contains the function print_R, which handles the conversion specifier R
+		
+		Authors
+		Bryan Freire
+
+		Imanol Asolo @Imanolasolo
