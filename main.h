@@ -1,6 +1,7 @@
-#ifndef MAIN_H
+#ifndef MAIN_H         /* Condition if exit a MAIN_H file it don't continue */
 #define MAIN_H         /* Define MAIN_H */
-
+#include <sdtio.h>     /* Defines libreries standar for programs */
+#include <stdlib.h>
 #include <stdarg.h>    /* Define stdargh library */
 /**
  * struct print - structure for printing various types
@@ -28,5 +29,4 @@ int print_p(va_list p);
 int print_S(va_list S);
 int print_r(va_list r);
 int print_R(va_list R);
-
-#endif
+#endif                  /* End the conditional */

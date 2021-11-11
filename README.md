@@ -1,6 +1,6 @@
 _printf
 
-_printf is a custom implementation of the C programming function printf. This project is an application of the C programming knowledge that Holberton School cohort 2 students have learned since starting the program on MaySeptember 20, 2021.
+_printf is a custom implementation of the C programming function printf. This project is an application of the C programming knowledge that Holberton School cohort 16 students have learned since starting the program on September 20, 2021.
 
 Prototype: int _printf(const char *, ...);
 
